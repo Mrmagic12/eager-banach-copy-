@@ -31,7 +31,7 @@ SECRET_KEY = "django-insecure-5d@gwyyhvg-uf=z2x5ics55hm=^&#=px+l-i@49=(&)o473bn(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pnrdp6-8000.csb.app', '34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev', '2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypfd5alil.pike.replit.dev', '2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypfd5alil.pike.replit.dev', '28d65abc-8bd2-417f-afea-464b0441f12e-00-1cc49z84jpayk.pike.replit.dev', '28d65abc-8bd2-417f-afea-464b0441f12e-00-1cc49z84jpayk.pike.replit.dev']
+ALLOWED_HOSTS = ['pnrdp6-8000.csb.app', '34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev', '2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypfd5alil.pike.replit.dev', '2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypfd5alil.pike.replit.dev', '28d65abc-8bd2-417f-afea-464b0441f12e-00-1cc49z84jpayk.pike.replit.dev', '28d65abc-8bd2-417f-afea-464b0441f12e-00-1cc49z84jpayk.pike.replit.dev', '4e365af9-9759-4181-9988-8bd926a5d297-00-159a4gk0omqrt.sisko.replit.dev']
 
 ALDRYN_BOILERPLATE_NAME='bootstrap3'
 
@@ -39,7 +39,7 @@ CSRF_FAILUER_VIEW = 'myapp.views.my_csrf_failure_view'
 
 CSRF_TRUSTED_SECURE = True
 
-CSRF_TRUSTED_ORIGINS = ['https://28d65abc-8bd2-417f-afea-464b0441f12e-00-1cc49z84jpayk.pike.replit.dev:3001/', 'https://28d65abc-8bd2-417f-afea-464b0441f12e-00-1cc49z84jpayk.pike.replit.dev:3001']
+CSRF_TRUSTED_ORIGINS = ['https://28d65abc-8bd2-417f-afea-464b0441f12e-00-1cc49z84jpayk.pike.replit.dev:3001/', 'https://28d65abc-8bd2-417f-afea-464b0441f12e-00-1cc49z84jpayk.pike.replit.dev:3001', 'https://4e365af9-9759-4181-9988-8bd926a5d297-00-159a4gk0omqrt.sisko.replit.dev:3001', 'https://4e365af9-9759-4181-9988-8bd926a5d297-00-159a4gk0omqrt.sisko.replit.dev:3001']
 
 CORS_ALLOW_ALL_ORIGINS = True
 
