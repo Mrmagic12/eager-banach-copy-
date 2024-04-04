@@ -69,10 +69,34 @@ DJANGOCMS_ICON_TEMPLATES = [
     ('svg', 'SVG template'),
 ]
 
+
+DJANGOCMS_PICTURE_TEMPLATES = [
+    ('background', _('Background image')),
+    ('custom_image_template', _('Custom image template'))
+]
+
+DJANGOCMS_PICTURE_ALIGN = [        
+    ('left', _('Align left')),
+    ('right', _('Align right')),
+    ('center', _('Align center')),
+    ("start", _("Float left")),            
+    ("end", _("Float right")),
+    ('top', _('Align top')),
+    ('middle', _('Align middle')),
+    ('bottom', _('Align Bottom')),
+    ('baseline', _('Align baseline')),           
+]
+
+DJANGOCMS_PICTURE_NESTING = True
+
 DJANGOCMS_STYLE_CHOICES = ['container', 'content', 'teaser']
 
 DJANGOCMS_STYLE_TEMPLATES = [
     ('feature', _('Feature')),
+    ('blogs', _('Blogs')),
+    ('footer', _('Footer')),
+    ('card', _('Card')),
+    ('language', _('Language'))
 ]
 
 DJANGOCMS_ICON_TEMPLATES = [
@@ -110,10 +134,11 @@ DJANGOCMS_ICON_SETS = [
   ('weathericon', 'wi', 'Weather Icons'),
   ('fontawesome4', 'fa', 'Font Awesome 4', '4.0.0'),
   ('fontawesome5light', 'fal', 'Font Awesome 5 Light', '5.3.1_pro'),
+  {'hear', 'fas', 'fontawesome'}
 ]
 
 DJANGOCMS_STYLE_TAGS = ['div', 'article', 'section', 'header', 'footer',
-  'h1', 'h2', 'h3', 'h4', 'h5', 'h6']
+  'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'span', 'p', 'a', 'img', 'ul', 'ol','li', 'table', 'tr', 'td', 'th', 'div', 'blockquote', 'pre','code', 'hr', 'br', 'b', 'strong', 'i', 'em', 'small','figure','figcaption']
 
 CSRF_COOKIE_HTTPONLY = True
 
@@ -145,6 +170,7 @@ INSTALLED_APPS = [
   "django.contrib.sites",
   "django.contrib.sitemaps",
   "djangocms_page_sitemap",
+  "django_select2",
     # CMS base apps
   "cms",
   "menus",
@@ -258,6 +284,7 @@ DJANGOCMS_ICON_SETS = [
 
 DJANGOCMS_PICTURE_TEMPLATES = [
     ('background', _('Background image')),
+    ('custom image', _('Custom image template'))
 ]
 
 DJANGOCMS_PICTURE_ALIGN = [
