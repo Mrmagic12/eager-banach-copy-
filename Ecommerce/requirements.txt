@@ -1,0 +1,16 @@
+Django
+wagtail
+django-grappelli
+blogger-to-puput
+puput
+wagtail-blog
+django-oscar-wagtail
+wagtail-shop
+wagtailerrorpages
+django-wagtail-customforms
+omniforms
+wagtail-jsonschema-forms
+wagtail-admin-list-controls 
+wagtailformblocks 
+django-grappelli
+wagtail-jinja2
