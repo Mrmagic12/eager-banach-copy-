@@ -96,7 +96,9 @@ DJANGOCMS_STYLE_TEMPLATES = [
     ('blogs', _('Blogs')),
     ('footer', _('Footer')),
     ('card', _('Card')),
-    ('language', _('Language'))
+    ('language', _('Language')),
+    ('container', _('Container')),
+    ('table', _('Table')),
 ]
 
 DJANGOCMS_ICON_TEMPLATES = [
@@ -104,6 +106,12 @@ DJANGOCMS_ICON_TEMPLATES = [
 ]
 
 DJANGOCMS_FORMS_USE_HTML5_REQUIRED = False
+
+DJANGOCMS_FORMS_PLUGIN_MODULE = _('Generic')
+
+DJANGOCMS_FORMS_PLUGIN_NAME = _('Form')
+
+DJANGOCMS_FORMS_DEFAULT_TEMPLATE = 'djangocms_forms/form_template/default.html'
 
 DJANGOCMS_FORMS_TEMPLATES = (
     ('djangocms_forms/form_template/default.html', _('Default')),
@@ -138,7 +146,7 @@ DJANGOCMS_ICON_SETS = [
 ]
 
 DJANGOCMS_STYLE_TAGS = ['div', 'article', 'section', 'header', 'footer',
-  'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'span', 'p', 'a', 'img', 'ul', 'ol','li', 'table', 'tr', 'td', 'th', 'div', 'blockquote', 'pre','code', 'hr', 'br', 'b', 'strong', 'i', 'em', 'small','figure','figcaption']
+  'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'span', 'p', 'a', 'img', 'ul', 'ol','li', 'table', 'tr', 'td', 'th', 'div', 'blockquote', 'pre','code', 'hr', 'br', 'b', 'strong', 'i', 'em', 'small','figure','figcaption','colgroup','col','table','thead','tbody','tfoot','caption','abbr','acronym','address','bdo','cite','code']
 
 CSRF_COOKIE_HTTPONLY = True
 
@@ -171,6 +179,7 @@ INSTALLED_APPS = [
   "django.contrib.sitemaps",
   "djangocms_page_sitemap",
   "django_select2",
+  "salesforce",
     # CMS base apps
   "cms",
   "menus",
@@ -254,6 +263,9 @@ TEMPLATES = [
         },
     },
 ]
+DJANGOCMS_PLUGIN_TABLE_CONTENTS_ENABLED = True
+DJANGOCMS_PLUGIN_TABLE_CONTENTS_TITLE = 'Table of Contents'
+DJANGOCMS_PLUGIN_TABLE_CONTENTS_MIN_HEADINGS = 3
 
 DJANGOCMS_FILE_TEMPLATES = [
     ('feature', _('Feature Version')),
@@ -412,7 +424,12 @@ SITE_ID = 1
 # A base template is part of this setup
 # https://docs.django-cms.org/en/release-4.1.x/reference/configuration.html#cms-templates
 
-CMS_TEMPLATES = (("base.html", _("Standard")),)
+CMS_TEMPLATES = (
+    ("base.html", _("Standard")),
+    ("custombase.html", _("Custom base template")),
+    ('login.html', _("[Login]")),
+    ("container.html", _("[Container]"))
+)
 
 # Enable permissions
 # https://docs.django-cms.org/en/release-4.1.x/topics/permissions.html
