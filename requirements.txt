@@ -15,11 +15,9 @@ djangocms-attributes-field
 djangocms-style
 django-frontify
 djangocms-versioning
-six
 djangocms-file
 djangocms-snippet
 djangocms-link-all
-wagtail
 djangocms-history
 djangocms-icon
 aldryn-boilerplates
@@ -28,4 +26,4 @@ djangocms-picture
 djangocms-maps
 gpt3discord
 djangocms-form-builder
-djangocms-utils
+django-utils-six

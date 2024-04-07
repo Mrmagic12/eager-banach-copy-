@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<form method="POST" action="{% url 'login' %}">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="inputEmail">Email address</label>
+    <input type="email" class="form-control" id="inputEmail" name="username" placeholder="Enter email" required>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword">Password</label>
+    <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+  <a href="{% url 'password_reset' %}" class="btn btn-link">Forgot password?</a>
+</form>
+
+<!-- Member Login Section -->
+<h2>Member Login</h2>
+<form method="POST" action="{% url 'member_login' %}">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="inputMemberID">Member ID</label>
+    <input type="text" class="form-control" id="inputMemberID" name="member_id" placeholder="Enter Member ID" required>
+  </div>
+  <div class="form-group">
+    <label for="inputMemberPassword">Password</label>
+    <input type="password" class="form-control" id="inputMemberPassword" name="member_password" placeholder="Password" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+
+  <a href="{% url 'password_reset' %}" class="btn btn-link">Forgot password?</a>
+</form>
+{% endblock %}
