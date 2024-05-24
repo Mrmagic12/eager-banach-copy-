@@ -1,0 +1,54 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static owl.carousel.min.css %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/design-system/2.23.2/styles/salesforce-lightning-design-system.min.css" integrity="sha512-Ag/al2FwucHLvh61it+t543Mj6GoIbQ2p8I5Ympw1amy2mXqPL/8I8AXIXY1AY9+/1Gk6pBCouJ5ejzP2ZvXiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="card-body">
+  <div class="container-fluid">
+    <table class="table table-bordered" id="category-list">
+      <colgroup>
+          <col width="5%">
+          <col width="15%">
+          <col width="20%">
+          <col width="30%">
+          <col width="15%">
+          <col width="15%">
+      </colgroup>
+      <thead>
+          <tr class="bg-gradient bg-primary bg-opacity-50 text-light">
+              <th class="px-2 py-2 text-center">#</th>
+              <th class="px-2 py-2 text-center">Date/Time</th>
+              <th class="px-2 py-2 text-center">Name</th>
+              <th class="px-2 py-2 text-center">Description</th>
+              <th class="px-2 py-2 text-center">Status</th>
+              <th class="px-2 py-2 text-center">Action</th>
+          </tr>
+      </thead>
+      <tbody>
+          {% for category in categories %}
+          <tr>
+              <td class="px-2 py-1 align-middle">{{ forloop.counter }}</td>
+              <td class="px-2 py-1 align-middle">{{ category.date_created|date:"Y-m-d h:i A" }}</td>
+              <td class="px-2 py-1 align-middle">{{ category.name }}</td>
+              <td class="px-2 py-1 align-middle">
+                  <p class="m-0 text-truncate">{{ category.description }}</p>
+              </td>
+              <td class="px-1 py-1 align-middle text-center">
+                  {% if category.status == '1' %}
+                  <span class="badge bg-primary bg-gradient rounded-pill px-2">Active</span> {% else %}
+                  <span class="badge bg-secondary bg-gradient rounded-pill px-2">Inactive</span> {% endif %}
+              </td>
+              <td class="px-2 py-1 align-middle text-center">
+                  <a class="btn btn-outline-primary btn-sm edit-data" href="javascript:void(0)" data-id="{{ category.pk }}" title="Edit">
+                      <i class="fa fa-edit"></i>
+                  </a>
+                  <button class="btn btn-outline-danger btn-sm delete-data" type="button" data-id="{{ category.pk }}" title="Delete">
+                      <i class="fa fa-trash"></i>
+                  </button>
+              </td>
+          </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>

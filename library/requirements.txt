@@ -1,2 +1,12 @@
+<<<<<<< HEAD
 Django>=4.1,<4.2
 wagtail>=4.2,<4.3
+=======
+<<<<<<< HEAD
+Django
+wagtail
+=======
+Django>=4.1,<4.2
+wagtail>=4.2,<4.3
+>>>>>>> 1676cc63 (add)
+>>>>>>> a00d90062941c835b49beb5a0e753a5d8762230f

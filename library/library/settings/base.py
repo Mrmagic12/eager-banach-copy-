@@ -24,6 +24,13 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # Application definition
 
 INSTALLED_APPS = [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    "customforms",
+=======
+>>>>>>> 1676cc63 (add)
+>>>>>>> a00d90062941c835b49beb5a0e753a5d8762230f
     "home",
     "search",
     "wagtail.contrib.forms",

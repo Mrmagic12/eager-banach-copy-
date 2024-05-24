@@ -15,14 +15,15 @@ djangocms-attributes-field
 djangocms-style
 django-frontify
 djangocms-versioning
-six
 djangocms-file
 djangocms-snippet
 djangocms-link-all
-wagtail
 djangocms-history
 djangocms-icon
 aldryn-boilerplates
 django-jsonfield-backport
 djangocms-picture
 djangocms-maps
+gpt3discord
+djangocms-form-builder
+django-utils-six
